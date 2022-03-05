@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				8F5C230427D0F8F100A95B90 /* PlayingSwiftUIApp.swift */,
-				8F5C230627D0F8F100A95B90 /* ContentView.swift */,
+				8F5C231327D1009B00A95B90 /* LandMark */,
 				8F5C230827D0F8F400A95B90 /* Assets.xcassets */,
 				8F5C230D27D0F8F400A95B90 /* Info.plist */,
 				8F5C230A27D0F8F400A95B90 /* Preview Content */,
@@ -67,6 +67,14 @@
 				8F5C230B27D0F8F400A95B90 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8F5C231327D1009B00A95B90 /* LandMark */ = {
+			isa = PBXGroup;
+			children = (
+				8F5C230627D0F8F100A95B90 /* ContentView.swift */,
+			);
+			path = LandMark;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
