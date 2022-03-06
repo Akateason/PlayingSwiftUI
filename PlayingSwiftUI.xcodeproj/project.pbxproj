@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F4B5F8027D4903000EFBF50 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4B5F7F27D4903000EFBF50 /* MapView.swift */; };
 		8F5C230527D0F8F100A95B90 /* PlayingSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C230427D0F8F100A95B90 /* PlayingSwiftUIApp.swift */; };
 		8F5C230727D0F8F100A95B90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C230627D0F8F100A95B90 /* ContentView.swift */; };
 		8F5C230927D0F8F400A95B90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F5C230827D0F8F400A95B90 /* Assets.xcassets */; };
 		8F5C230C27D0F8F400A95B90 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F5C230B27D0F8F400A95B90 /* Preview Assets.xcassets */; };
+		8F5C231527D30AC000A95B90 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C231427D30AC000A95B90 /* CircleImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F4B5F7F27D4903000EFBF50 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		8F5C230127D0F8F100A95B90 /* PlayingSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayingSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F5C230427D0F8F100A95B90 /* PlayingSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingSwiftUIApp.swift; sourceTree = "<group>"; };
 		8F5C230627D0F8F100A95B90 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8F5C230827D0F8F400A95B90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F5C230B27D0F8F400A95B90 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8F5C230D27D0F8F400A95B90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F5C231427D30AC000A95B90 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				8F5C230627D0F8F100A95B90 /* ContentView.swift */,
+				8F5C231427D30AC000A95B90 /* CircleImageView.swift */,
+				8F4B5F7F27D4903000EFBF50 /* MapView.swift */,
 			);
 			path = LandMark;
 			sourceTree = "<group>";
@@ -147,6 +153,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F5C230727D0F8F100A95B90 /* ContentView.swift in Sources */,
+				8F4B5F8027D4903000EFBF50 /* MapView.swift in Sources */,
+				8F5C231527D30AC000A95B90 /* CircleImageView.swift in Sources */,
 				8F5C230527D0F8F100A95B90 /* PlayingSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +288,7 @@
 				DEVELOPMENT_TEAM = 5D74XHX7AD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PlayingSwiftUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +310,7 @@
 				DEVELOPMENT_TEAM = 5D74XHX7AD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PlayingSwiftUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
