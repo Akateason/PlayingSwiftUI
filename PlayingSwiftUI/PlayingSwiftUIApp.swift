@@ -11,7 +11,7 @@ import SwiftUI
 struct PlayingSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView() // 1. 实现最简单的一个view
         }
     }
 }
