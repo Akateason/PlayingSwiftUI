@@ -13,9 +13,14 @@ import SwiftUI
 import CoreLocation
 
 
-struct Landmark: Hashable, Codable {
+struct Landmark: Hashable, Codable, Identifiable {
     
-    // 添加 Codable 使得在结构和数据文件之间移动数据变得更加容易。在本节后面的部分中，您将依靠 Codable 协议的 Decodable 组件从文件中读取数据。
+    //1 添加 Codable 使得在结构和数据文件之间移动数据变得更加容易。在本节后面的部分中，您将依靠 Codable 协议的 Decodable 组件从文件中读取数据。
+    //2 通过向 Landmark 类型添加 Identifiable 简化 List 代码。
+    // The Landmark data already has the id property required by Identifiable protocol; you only need to add a property to decode it when reading the data.
+    // Landmark 数据已经具有 Identity 协议所要求的 id 属性; 在读取数据时，只需添加一个属性就可以对其进行解码。
+    // 切换回 LandmarkList.ift 并删除 id 参数。
+
     
     var id: Int
     var name: String
