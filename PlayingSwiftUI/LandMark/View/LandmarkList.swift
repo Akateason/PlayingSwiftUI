@@ -17,8 +17,14 @@ struct LandmarkList: View {
             // 这里. id参数为什么可以删除, 参考 Landmark 带有Identifiable协议, 切有id属性.
             
             List(landmarks) { landmarkItem in
-                // 通过从闭包返回 LandmarkRow 来完成动态生成的列表。 这将为地标数组中的每个元素创建一个 LandmarkRow。
-                LandmarkRow(landmark: landmarkItem)
+//                // 通过从闭包返回 LandmarkRow 来完成动态生成的列表。 这将为地标数组中的每个元素创建一个 LandmarkRow。
+//                LandmarkRow(landmark: landmarkItem)
+                
+                NavigationLink {
+                    LandmarkDetail()
+                } label: {
+                    LandmarkRow(landmark: landmarkItem)
+                }
             }
             .navigationTitle("Landmarks")
         }
