@@ -15,9 +15,17 @@ struct LandmarkRow: View {
     var body: some View {
         HStack {
             landmark.image.resizable().frame(width: 50, height: 50) // 图片
+            
             Text(landmark.name) // 文字
             
             Spacer() // 后面撑满
+            
+            // 收藏
+            if landmark.isFavorite {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+            }
+            
         }
     }
 }
