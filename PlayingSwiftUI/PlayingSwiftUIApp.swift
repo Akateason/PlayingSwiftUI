@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct PlayingSwiftUIApp: App {
+    
+    @StateObject private var modelData = ModelData()
+    // 更新 PlayingSwiftUIApp 以创建一个模型实例，并使用 Environment Object (_:)修饰符将其提供给 ContentView。
+    // 使用 @StateObject 属性在应用程序的生命周期内只初始化给定属性的模型对象一次。当您在应用程序实例中使用该属性时(如下所示) ，以及在视图中使用该属性时，都是如此。
+    
+    
     var body: some Scene {
         WindowGroup {
-            ContentView() // 1. 实现最简单的一个view
+            ContentView()
+                .environmentObject(modelData)
         }
     }
     

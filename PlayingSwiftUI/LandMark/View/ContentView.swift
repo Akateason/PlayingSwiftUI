@@ -18,5 +18,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ModelData())
+        // 更新 ContentView 预览以将模型对象添加到环境中，从而使该对象可用于任何子视图。
+        
     }
 }

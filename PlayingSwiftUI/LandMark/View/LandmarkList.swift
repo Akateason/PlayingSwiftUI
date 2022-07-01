@@ -9,10 +9,12 @@ import SwiftUI
 
 struct LandmarkList: View {
     
+    @EnvironmentObject var modelData: ModelData // 模型数据属性自动获取它的值，只要已经对父级应用了 Environmental Object (_:)修饰符。
+    
     @State private var showFavoritesOnly = false
 
     var filteredLandmarks: [Landmark] {
-        landmarks.filter { landmark in
+        modelData.landmarks.filter { landmark in
             (!showFavoritesOnly || landmark.isFavorite)
         }
     } // 过滤. 是否收藏 or not

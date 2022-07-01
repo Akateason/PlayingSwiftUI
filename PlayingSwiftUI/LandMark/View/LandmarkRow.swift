@@ -31,6 +31,9 @@ struct LandmarkRow: View {
 }
 
 struct LandmarkRow_Previews: PreviewProvider {
+    
+    static var landmarks = ModelData().landmarks
+    
     static var previews: some View {
         
         // 使用 previewLayout (_:)修饰符可以设置一个近似于列表中某一行的大小。
