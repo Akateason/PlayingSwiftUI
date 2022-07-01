@@ -8,7 +8,14 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    
+    @EnvironmentObject var modelData: ModelData
+
     var landmark: Landmark
+    
+    var landmarkIndex: Int {
+        modelData.landmarks.firstIndex(where: { $0.id == landmark.id })!
+    }
     
     var body: some View {
 
@@ -22,8 +29,16 @@ struct LandmarkDetail: View {
                 .padding(.bottom, -130)
             
             VStack(alignment: .leading) {
-                Text(landmark.name)
-                    .font(.title)
+                
+                HStack {
+                    Text(landmark.name)
+                        .font(.title)
+                    FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
+                    // 接下来，将 FavoriteButton 添加到详细信息视图，将按钮的 isSet 属性绑定到给定地标的 isFavorite 属性。
+                    //. 把数据源的 字段. 改了.
+                }
+                
+                
                 
                 HStack {
                     Text(landmark.park)
@@ -52,7 +67,10 @@ struct LandmarkDetail: View {
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
+    static let modelData = ModelData()
+    
     static var previews: some View {
-        LandmarkDetail(landmark: ModelData().landmarks[0])
+        LandmarkDetail(landmark: modelData.landmarks[0])
+            .environmentObject(modelData)
     }
 }

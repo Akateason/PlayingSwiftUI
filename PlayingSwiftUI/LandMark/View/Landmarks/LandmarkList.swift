@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct LandmarkList: View {
-    
-    @EnvironmentObject var modelData: ModelData // 模型数据属性自动获取它的值，只要已经对父级应用了 Environmental Object (_:)修饰符。
-    
+    // 模型数据属性自动获取它的值，只要已经对父级应用了 Environmental Object (_:)修饰符。
+    @EnvironmentObject var modelData: ModelData
+        
+    // 使用 @State 属性包装器将值标记为 state，将属性声明为 private，并为其赋予默认值。
     @State private var showFavoritesOnly = false
 
+    // 过滤. 是否收藏 or not
     var filteredLandmarks: [Landmark] {
         modelData.landmarks.filter { landmark in
             (!showFavoritesOnly || landmark.isFavorite)
         }
-    } // 过滤. 是否收藏 or not
+    }
     
     
     var body: some View {
@@ -55,6 +57,7 @@ struct LandmarkList: View {
 
 struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkList()
+        // 更新 LandmarkDetail 视图以在环境中使用 ModelData 对象。
+        LandmarkList().environmentObject(ModelData())
     }
 }
