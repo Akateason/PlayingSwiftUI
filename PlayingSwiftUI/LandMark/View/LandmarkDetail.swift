@@ -8,47 +8,51 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    var landmark: Landmark
+    
     var body: some View {
 
-        VStack {
-            MapView()
+        ScrollView {
+            MapView(coordinate: landmark.locationCoordinate)
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 300)
             
-            CircleImageView()
+            CircleImageView(image: landmark.image)
                 .offset(y: -130)
                 .padding(.bottom, -130)
             
             VStack(alignment: .leading) {
-                Text("Tutle Rock")
+                Text(landmark.name)
                     .font(.title)
                 
                 HStack {
-                    Text("Joshua Tree National Park")
+                    Text(landmark.park)
                         .font(.subheadline)
                     Spacer() // 若要指导布局使用设备的全宽度，请通过向包含两个文本视图的水平堆栈添加间隔符来分离公园和状态。
                     // 间隔符展开以使其包含的视图使用其父视图的所有空间，而不是仅由其内容定义其大小。
-                    Text("California")
+                    Text(landmark.state)
                         .font(.subheadline)
                 }
                 
                 Divider()
                 
-                Text("About turtle rock")
+                Text("About \(landmark.name)")
                     .font(.title2)
-                Text("Descriptive text goes here")
+                Text(landmark.description)
             }
             .padding()
             
-            Spacer() // 最后，使用 pding ()修饰符方法为地标的名称和细节提供更多的空间。
+//            Spacer() // 最后，使用 pding ()修饰符方法为地标的名称和细节提供更多的空间。
 
         }
-        
+        .navigationTitle(landmark.name)
+        .navigationBarTitleDisplayMode(.inline)
+
     }
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkDetail()
+        LandmarkDetail(landmark: landmarks[0])
     }
 }
